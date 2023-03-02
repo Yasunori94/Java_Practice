@@ -1,31 +1,8 @@
 public class Detention {
     public static void main(String[] args) {
-
-        //what Bart did so far
-
-        // Task 2 – call the function 6 times. 
-
-        printLines();
-        printLines();
-   }
-
-
-
-    //Task 1 - Make a function here. See the doc comment for details. 
-
-    public static void printLines(){
-      System.out.println("I will not copy and paste code.");
-      System.out.println("I will use Camel Case when writing class names.");
-      System.out.println("I will use lower Camel Case when writing function names.");
-      System.out.println("I will use lower Camel Case when writing variables names.\n");
-    } 
-
-    /**    
-      * Funtion name: printLines
-      *
-      * Inside the function:
-      *   1. prints the four lines       
-      */
-
-
+        for (int i = 0; i < 10; i++){
+        System.out.println("Hi Bart. I can write lines for you.\nWhat do you want me to write?");
+        // See Learn the Part for the instructions.
+        }
+    }
 }

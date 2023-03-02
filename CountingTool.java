@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class CountingTool {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         /*Task 1 – Choose a number
 
@@ -12,7 +12,7 @@ public class CountingTool {
         */
 
         System.out.print("Hi Timmy! Choose a number to count to: ");
-        int number = scan.nextInt();
+        int number = sc.nextInt();
 
 
         /* Task 2 – Count from 0 to that number
@@ -25,6 +25,8 @@ public class CountingTool {
         for (int i = 0; i <= number; i++) {
             System.out.print(i + " ");
         }
-        scan.close();
+        sc.close();
     }
+        
+    
 }
