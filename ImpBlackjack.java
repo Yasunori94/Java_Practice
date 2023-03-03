@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
-import javax.swing.plaf.synth.SynthScrollBarUI;
-
-public class Blackjack {
+public class ImpBlackjack {
 
     public static Scanner sc = new Scanner(System.in);
 

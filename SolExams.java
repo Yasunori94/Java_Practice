@@ -1,4 +1,4 @@
-public class Exams {
+public class SolExams {
     public static void main(String[] args) {
         
         String[] seats = {"Malfoy", "Crabbe", "Goyle", "Pansy", "Dean"};
