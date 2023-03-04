@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Javapedia {
+public class JavapediaSol {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("\n**********Javapedia**********");

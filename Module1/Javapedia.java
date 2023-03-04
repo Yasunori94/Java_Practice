@@ -2,12 +2,14 @@ import java.util.Scanner;
 
 public class Javapedia {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("\n**********Javapedia**********");
         System.out.println("How many historical figures will you register?");
+        int numFig = sc.nextInt();
         //Task 1 – Ask the user: how many historical figures will you register?
         //       – Store the value.
         
+        int[][] table = new int[2][3];
         //Task 2 – Create a 2D array with a variable number of rows, and 3 values per row.         
          
         //Watch out for the nextLine() pitfall. 
@@ -43,7 +45,7 @@ public class Javapedia {
 
         */        
 
-        scan.close();
+        sc.close();
     }
 
     /**
