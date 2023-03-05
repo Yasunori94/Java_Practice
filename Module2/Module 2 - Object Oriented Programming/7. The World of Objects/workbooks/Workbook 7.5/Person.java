@@ -20,6 +20,14 @@ public class Person {
         this.seatNumber = source.seatNumber;
     }
     
+    public void applyPaspport(boolean trueOrfalse){
+        int number = (int)(Math.random()*2);
+    }
+
+    public int chooseSeat(){
+        int number2 = (int) (Math.random() * 11 + 1); 
+        return number2;
+    }
 
     public String getName() {
         return name;

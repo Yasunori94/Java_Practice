@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class ImpReferenceTrap {
+public class ReferenceTrap {
     public static void main(String[] args) {
         String [] staffLastYear = {"Tammy", "Joel", "Ellie"};
         String [] staffThisYear = Arrays.copyOf(staffLastYear, staffLastYear.length);
