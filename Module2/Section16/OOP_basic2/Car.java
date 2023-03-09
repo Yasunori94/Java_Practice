@@ -61,7 +61,7 @@ public class Car {
 
     public String[] getParts(){
         return Arrays.copyOf(this.parts, this.parts.length);
-        // 2.4 this.partsとすると、同じフィールドを参照してしまうため、
+        // 2.4 this.partsとすると、同じフィールドを参照してしまうため、コピーを作成
     }
     public void setparts(String[] parts){
         this.parts = Arrays.copyOf(this.parts, this.parts.length);

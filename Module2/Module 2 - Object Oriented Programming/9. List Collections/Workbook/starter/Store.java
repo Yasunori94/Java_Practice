@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Store {
@@ -5,16 +6,19 @@ public class Store {
     private List<Movie> movies;
 
     public Store() {
+        this.movies = new ArrayList<>();
         // TODO
     }
 
     public Movie getMovie(int index) {
+       
         // TODO
-        return null;
+        return arrayList.get(index);;
     }
 
     public void setMovie(int index, Movie movie) {
         // TODO
+
     }
 
     public void addMovie(Movie movie) {

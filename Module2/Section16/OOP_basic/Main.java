@@ -3,11 +3,12 @@
 public class Main {
     public static void main(String[] args) {
         String[] parts = new String[] {"Tired"};
-        // オブジェクト「nissan」：new Carとして、各パラメーターを定義されて作られている
-        Car nissan = new Car("Nissan", 10000, 2020, "Green", parts);
-        // オブジェクト「dodge」
-        Car dodge = new Car("Dodge", 11000, 2019, "Blue", parts);
 
+        Car nissan = new Car("Nissan", 10000, 2020, "Green");
+        // インスタンス（クラスから作られたオブジェクト）「nissan」：new Carとして、各パラメーターを定義されて作られている
+        // 最初のCarは、参照する型（クラス）、後のCarはCarを元にしたフレーム
+        Car dodge = new Car("Dodge", 11000, 2019, "Blue");
+        // インスタンス（クラスから作られたオブジェクト）「dodge」
 
         nissan.setColor("Jet Black");
         dodge.setColor("Purple");

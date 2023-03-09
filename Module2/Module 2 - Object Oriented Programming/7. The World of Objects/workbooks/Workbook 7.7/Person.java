@@ -23,6 +23,15 @@ public class Person {
         this.seatNumber = source.seatNumber;
         this.passport = Arrays.copyOf(source.passport, source.passport.length);
     }
+
+    public String toString(){
+        return
+        "Name: " + this.name + "\n" + "Nationality: " + 
+        this.nationality + "\n" + "Date of Birth: " + 
+        this.dateOfBirth + "\n" + "Seat Number: " +
+        this.seatNumber + "\n" + "Passport: " + 
+        Arrays.toString(this.passport) + "\n";    
+    }
     
     public String getName() {
         return name;

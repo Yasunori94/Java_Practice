@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-// クラス（CarのBlueprintのようなもの）
+// クラス
 public class Car {
     private String make;
     private double price;
@@ -8,6 +8,7 @@ public class Car {
     private String color;
     private String[] parts;
   
+    // コンストラクタ
     public Car (String make, double price, int year, String color, String[] parts) {
 
         this.make = make;
@@ -15,20 +16,32 @@ public class Car {
         this.year = year;
         this.color = color;
         this.parts = Arrays.copyOf(parts, parts.length);
-        // 2.2 String[] partsのパラメーターから受け渡された場合に、そのコピーをthis.partsとするように設定
+
     }
 
+    public void drive(){
+        System.out.println("You bought the beautiful" + this.make );
+    }
+
+    // コンストラクタ
     public Car (Car source){
-    // パラメーターがパスされた場合のみ、動作するCarというオブジェクト
+
         this.make = source.make;
-        // source.makeは、パラメーターCar source（nissan）のmakeフィールド（Nissan）を参照している。
-        // this.make（このコンストラクタのmakeフィールド）を source.make（nissanのmakeフィールド）にすることで、コピーが実現する。
         this.price = source.price;
         this.year = source.year;
         this.color = source.color;
         this.parts = source.parts;
     }
-
+    // コンストラクタ
+    public String toString(){
+        return "Make: " + this.make + ".\n" 
+        +  "Price: " + this.price + ".\n"
+        +  "Year: " + this.year + ".\n"
+        +  "Color: " + this.color + ".\n"
+        +  "Parts: " + Arrays.toString(parts) + ".\n";
+    }
+    // public String toStrong()を設定することで、Main.javaでSystem.out.println(nissan(オブジェクト));が、{}を表示するようになる。
+    // デフォルトで、Car@~~~~と表示されるものを書き換えた形になる（オーバーライド）
 
     public String getMake(){
         return make;
