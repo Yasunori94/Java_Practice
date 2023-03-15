@@ -12,7 +12,19 @@ public class Dogs{
         totalNum += tn;
     }
 
+    // Overriding toString
+    public String toString(){
+        return
+        "\nName: " + this.name +
+        "\nOwner: " + this.nameOfOwner +
+        "\nID :" + this.id +
+        "\nTotal number of dogs and cats: " + totalNum;
+    }
 
+    // New func
+    public String voice(String v){
+        return "This dog's voice is: " + v;
+    }
 
     // getters and setters
 
@@ -43,6 +55,8 @@ public class Dogs{
     public static void setTotalNum(int tn){
         totalNum += tn;
     }
+
+
     
 }
 
