@@ -1,3 +1,6 @@
+import model.src.main.java.com.ltp.Game;
+import model.src.main.java.com.ltp.Team;
+
 public class Main {
 
     public static void main(String[] args) {

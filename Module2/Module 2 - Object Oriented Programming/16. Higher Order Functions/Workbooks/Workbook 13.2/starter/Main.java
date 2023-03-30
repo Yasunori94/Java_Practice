@@ -6,6 +6,9 @@ public class Main {
 
         List<Double> prices = Arrays.asList(55.99, 33.99, 88.99, 11.49, 55.99, 111.99, 77.99);
 
+        prices.sort((x,y) -> x.compareTo(y));
+        prices.forEach(x -> System.out.println(x));
+
         // TODO
 
         System.out.println("\nPrices\n------");
@@ -27,7 +30,10 @@ public class Main {
 
         // TODO
 
+        books.sort((x,y) -> x.compareTo(y));
+
         System.out.println("\nLibrary\n--------");
+        books.forEach(x -> System.out.println(x));
 
         // TODO
 

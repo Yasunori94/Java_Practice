@@ -19,6 +19,13 @@ public class Main {
 
         students.stream()
             //intermediate operation goes here
-           .forEach(null); // terminal operation
+            .filter(s -> {
+                return s.getScore() > 80;
+            })
+            .forEach(s -> {
+                System.out.println(
+                "Congratulations " + s.getName() + " for achieving a score of " + s.getScore()
+                );
+            });
     }
 }

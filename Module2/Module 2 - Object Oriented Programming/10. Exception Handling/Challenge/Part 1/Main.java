@@ -41,25 +41,37 @@ public class Main {
 
             // 1. Anticipate the user not entering an integer.
 
-            int choice = scanner.nextInt();
 
+            if(!scanner.hasNextInt()){
+                scanner.next();
+                continue;
+            }
+
+            int choice = scanner.nextInt();
+            if (incorrectChoice(choice)) continue;
+
+            scanner.close();
             // 2. Anticipate the choice being incorrect.
-            return choice;
+  
         }
     }
 
     public static boolean incorrectChoice(int choice) {
-        // TODO
-        return false;
+        return choice < 0 || choice > 9;
     }
 
     public static double promptForRating(Scanner scanner, String name) {
         while (true) {
             System.out.print("\nSet a new rating for " + name + ": ");
             
+            if(!scanner.hasNextDouble()){
+                scanner.next();
+                continue;
+            }
             // 1. Anticipate the user not entering a double.
 
             double rating = scanner.nextDouble();
+            if(incorrectRating(rating))continue;
             
             // 2. Anticipate the rating being incorrect.
 
@@ -68,8 +80,7 @@ public class Main {
     }
 
     public static boolean incorrectRating(double rating) {
-        // TODO
-        return false;
+        return rating < 0 || rating > 10;
     }
 
     public static void loadMovies(String fileName) throws FileNotFoundException {

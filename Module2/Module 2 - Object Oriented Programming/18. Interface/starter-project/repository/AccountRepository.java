@@ -10,7 +10,7 @@ public class AccountRepository {
     private Map<String, Account> datastore = new HashMap<>();
 
     public void createAccount(Account account) {
-
+        this.datastore.put(account.getId(), account);
     }
 
     public Account retrieveAccount(String id) {

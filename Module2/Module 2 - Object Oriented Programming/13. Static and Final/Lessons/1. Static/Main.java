@@ -8,7 +8,8 @@ public class Main {
         System.out.println(liam.getFirstName() + " " + liam.getLastName());
         System.out.println(olivia.getFirstName() + " " + olivia.getLastName());
         System.out.println(ethan.getFirstName() + " " + ethan.getLastName());
-        System.out.println("User Count: " + "<count>");
+        System.out.println("User Count: " + User.userCount);
+        // userCountはstaticのため、User(クラス)から直接アクセスする。
 
     }
 }

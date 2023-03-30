@@ -1,12 +1,18 @@
 package product;
 
-public class Pants {
+public class Pants extends Product{
 
     private int waist;
     private int length;
-    private double price;
-    private String color;
-    private String brand;
+
+
+    public Pants(double price, String color, String brand, int waist, int length) {
+        super(price, color, brand);
+        // superでProductクラスのコンストラクタを呼び出している
+        this.waist = waist;
+        this.length = length;
+    }
+
 
     public int getWaist() {
         return this.waist;
@@ -24,28 +30,17 @@ public class Pants {
         this.length = length;
     }
 
-    public double getPrice() {
-        return this.price;
+    public void fold() {
+        super.fold();
+        // オーバーライドする前のfoldを呼び出している
+        System.out.println("Hold pants upright");
+        System.out.println("Fold one leg over the other");
+        System.out.println("Fold pants from bottom in thirds");
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public String getColor() {
-        return this.color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getBrand() {
-        return this.brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
+    @Override
+    public void wear() {
+        System.out.println("The " + waist + " " + length + " pants look great on you");
     }
 
 }

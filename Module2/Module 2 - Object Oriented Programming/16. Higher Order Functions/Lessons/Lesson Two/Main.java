@@ -5,6 +5,10 @@ public class Main {
     public static void main(String[] args) {
 
         List<Integer> integers = Arrays.asList(25, 19, 23, 45, 38, 23, 59, 12);
+        integers.sort((right, left) -> {
+            // 右の数をrightに渡して、左の数をleftに渡し、その数を比べていく
+            return right.compareTo(left);
+        });
 
 
     }

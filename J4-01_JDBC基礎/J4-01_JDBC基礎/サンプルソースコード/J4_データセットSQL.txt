@@ -1,0 +1,23 @@
+﻿###【J4_JDBC】データセットSQL
+
+#▼--------------------以下のSQLをコピーして演習の環境を整えましょう--------------------▼
+
+
+#[ UZUZ_MEMBER（UZUZメンバーテーブル） ]
+CREATE TABLE UZUZ_MEMBER (
+  ID                INT          NOT NULL PRIMARY KEY                 COMMENT 'ID'                   ,
+  NAME              VARCHAR(30)  NOT NULL                             COMMENT '名前'                 ,
+  GENDER            CHAR(1)      NOT NULL                             COMMENT '性別（男：M／女：F）' ,
+  AGE               INT          NOT NULL                             COMMENT '年齢'                 ,
+  COURSE            VARCHAR(30)  NOT NULL                             COMMENT 'コース'
+);
+INSERT INTO TEST_DB.UZUZ_MEMBER (ID , NAME     , GENDER , AGE , COURSE   )
+                         VALUES (1  , 'MOCO'   , 'F'    , 4   , 'PG'     ) ;
+INSERT INTO TEST_DB.UZUZ_MEMBER (ID , NAME     , GENDER , AGE , COURSE   )
+                         VALUES (2  , 'CHOCO'  , 'M'    , 7   , 'INFRA'  ) ;
+INSERT INTO TEST_DB.UZUZ_MEMBER (ID , NAME     , GENDER , AGE , COURSE   )
+                         VALUES (3  , 'TARO'   , 'M'    , 5   , 'PG'     ) ;
+INSERT INTO TEST_DB.UZUZ_MEMBER (ID , NAME     , GENDER , AGE , COURSE   )
+                         VALUES (4  , 'RINRIN' , 'F'    , 3   , 'PG'     ) ;
+INSERT INTO TEST_DB.UZUZ_MEMBER (ID , NAME     , GENDER , AGE , COURSE   )
+                         VALUES (5  , 'CHAMP'  , 'M'    , 5   , 'MARKET' ) ;

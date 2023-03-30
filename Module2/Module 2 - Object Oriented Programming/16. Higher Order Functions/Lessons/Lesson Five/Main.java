@@ -6,16 +6,21 @@ public class Main {
         
         // *******************forEach*******************
         List<String> usernames = Arrays.asList("blueEyedDreamer", "FiercePhoenix", "Wildflower87", "SerendipitousSurprise");
-        
+        usernames.stream()
+            .map(u -> u.toUpperCase())
+            .forEach(u -> System.out.println(u));
 
         // *******************toList*******************
-        // List<String> upperUsernames;
+        List<String> upperUsernames = usernames.stream()
+            .map(u -> u.toUpperCase())
+            .toList();
+        // usernamesをupper caseにし、リスト化する
 
 
         // *******************reduce*******************
 
         List<Double> earnings = Arrays.asList(40.50, 60.00, 120.50, 20.00, 50.50, 20.00);
-        // Double totalEarnings = 
+        Double totalEarnings = earnings.stream().reduce(null, null)
 
 
         // *******************reduce*******************

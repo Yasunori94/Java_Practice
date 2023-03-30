@@ -1,36 +1,17 @@
 package product;
 
-public class Shirt {
+public class Shirt extends Product{
 
-    private double price;
-    private String color;
-    private String brand;
     private Size size;
     public enum Size {SMALL, MEDIUM, LARGE}
 
-    public double getPrice() {
-        return this.price;
+
+    public Shirt(double price, String color, String brand, Size size) {
+        super(price, color, brand);
+        // superでProductクラスのコンストラクタを呼び出している
+        this.size = size;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public String getColor() {
-        return this.color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getBrand() {
-        return this.brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
 
     public Size getSize() {
         return this.size;
@@ -40,5 +21,16 @@ public class Shirt {
         this.size = size;
     }
 
+    public void fold() {
+        super.fold();
+        System.out.println("Lay shirt on a flat surface");
+        System.out.println("Fold the shirt sideways");
+        System.out.println("Bring sleeves in");
+        System.out.println("Fold from bottom up");
+    }
+
+    public void wear() {
+        System.out.println("The " + this.size + " suits you well.");
+    }
 
 }

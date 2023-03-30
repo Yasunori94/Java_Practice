@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.List;
 
@@ -15,6 +16,19 @@ public class Main {
         );
 
         // TODO
+
+        payments.forEach(p -> {
+            System.out.println("Date: " + p.getDate().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+            System.out.println("Amount: " + p.getAmount());
+            System.out.println("---"); 
+        });
+
+        payments.sort((right, left) -> {
+            int r = (int)right.getAmount();
+            int l = (int)left.getAmount();
+
+            return r.getAmount().compareTo(l.getAmount());
+        });
 
       }
     
