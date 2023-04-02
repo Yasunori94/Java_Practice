@@ -1,8 +1,9 @@
 interface WaterBottleInterface{
 
     String color = "Blue";
+    // 暗黙でpublic static finalとなる
     void fillUp();
-    // interfaceで作られたメソッドはオーバーライドされなければならない(abstract クラス内のメソッドと同様)
+    // interfaceで作られたメソッドはオーバーライドされなければならない(強制的にabstract修飾子が付与される)(protectedなどをつけるとコンパイルエラーになる)
 
 }
 
