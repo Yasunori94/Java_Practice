@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<!--xml（拡張可能なマークアップ言語）のネームスペースを定義-->
+<head>
+    <meta charset="UTF-8">
+    <title>課題一覧 | 課題管理アプリケーション</title>
+</head>
+<body>
+<h1>課題一覧</h1>
+<a href="../index.html" th:href="@{/}">トップページ</a>
+<table>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>課題</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each = "issue : ${issueList}">
+<!--        issueController内のissueListを呼び出し、issueという変数に１つずつ当てはめる-->
+        <th th:text = "${issue.id}">(id)</th>
+<!--        issueに当てはめられたもののidに置き換える処理。-->
+        <td th:text = "${issue.summary}">(summary)</td>
+        <!--        issueに当てはめられたもののsummaryに置き換える処理。-->
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

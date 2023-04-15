@@ -33,7 +33,7 @@ public abstract class Mainclass {
     }
 
     void instruction(){
-        System.out.println("Please enter the class");
+        System.out.println("Please enter the class room");
     }
 
 }
