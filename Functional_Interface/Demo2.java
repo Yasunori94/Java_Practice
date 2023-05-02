@@ -2,27 +2,28 @@
 @FunctionalInterface
 // アノテーションをつけることで、複数のメソッドを実装するとエラーになる
 interface A {
-    void show();
-//    デフォルトで、public abstract
-    default void show2(){
-        System.out.println("show2()");
-    }
+    int add(int i, int j);
 }
 
-class B implements A{
-    public void show(){
-        System.out.println("show();");
-    }
-    public void show2(){
-        System.out.println("overridden show2();");
-    }
-}
 
 public class Demo2 {
     public static void main(String[] args) {
-        A obj = new B();
-        // インターフェイスAを型として、クラスBを実装
-        obj.show();
-        obj.show2();
+
+        A obj = (i, j) -> i + j;
+
+        // returnの場合は、returnを記述する必要はない
+
+// 下記がもとのコード
+        // A obj1 = new A() {
+
+        //     public int add(int i, int j){
+        //         return i + j;
+        //     }
+
+        // };
+
+        int result = obj.add(5, 4);
+        System.out.println(result);
+
     }
 }
